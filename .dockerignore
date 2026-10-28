@@ -1,0 +1,6 @@
+.git
+__pycache__/
+*.pyc
+reports/*
+tests/
+*.zip

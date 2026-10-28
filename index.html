@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security Log Analyzer | Python Security Operations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div><strong>SECURITY LAB</strong><small>PYTHON LOG ANALYZER</small></div>
+      </div>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav">
+        <a class="nav-link active" href="#overview"><span class="nav-icon">▦</span> Overview</a>
+        <a class="nav-link" href="#alerts"><span class="nav-icon">◉</span> Security Alerts <b class="nav-count" id="navAlertCount">6</b></a>
+        <a class="nav-link" href="#logs"><span class="nav-icon">≡</span> Log Explorer</a>
+        <a class="nav-link" href="#reports"><span class="nav-icon">▤</span> Reports</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="status-card">
+          <div class="status-head"><span class="pulse"></span> LOCAL ANALYZER</div>
+          <p>Python detection engine</p>
+          <small>Sample logs or uploaded file · local only</small>
+        </div>
+        <div class="profile">
+          <div class="avatar">AF</div>
+          <div><strong>Security Analyst</strong><small>Local demo workspace</small></div>
+          <span class="dots">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Toggle menu">☰</button>
+        <div class="breadcrumbs">Security Operations <span>/</span> <strong>Python Analyzer</strong></div>
+        <div class="top-actions">
+          <div class="live-pill"><span class="pulse"></span> LOCAL ENGINE</div>
+          <button class="icon-btn" id="themeBtn" title="Toggle theme">◐</button>
+          <div class="top-avatar">AF</div>
+        </div>
+      </header>
+
+      <section class="page" id="overview">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">SECURITY POSTURE <span class="eyebrow-dot"></span> LOCAL DEMO</div>
+            <h1>Security overview</h1>
+            <p class="subtitle">Analyze log files with the project’s Python detection engine, inspect evidence, and export reports.</p>
+          </div>
+          <div class="heading-actions">
+            <label class="btn btn-secondary upload-btn" for="logFile">↑ Analyze log file</label>
+            <input type="file" id="logFile" accept=".log,.txt,.csv,.json,.xml">
+            <button class="btn btn-primary" id="scanBtn"><span>↻</span> Analyze sample logs</button>
+          </div>
+        </div>
+
+        <div class="notice">
+          <div class="notice-icon">i</div>
+          <div><strong>Connected to the Python detection engine</strong><p>Sample logs are analyzed by the project’s real parser and detection rules. Upload your own authorized log file to inspect its results. This dashboard does not block traffic or change system settings.</p></div>
+          <button class="notice-close" id="noticeClose" aria-label="Dismiss notice">×</button>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top"><span>Total events</span><span class="stat-icon blue">≋</span></div>
+            <div class="stat-value" id="totalEvents">1,284</div>
+            <div class="stat-foot"><span class="trend neutral">●</span> Events in current dataset</div>
+            <div class="mini-bars bars-blue"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Security alerts</span><span class="stat-icon red">!</span></div>
+            <div class="stat-value" id="totalAlerts">06</div>
+            <div class="stat-foot"><span class="trend danger">↑ 2</span> High-priority findings</div>
+            <div class="mini-bars bars-red"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Unique source IPs</span><span class="stat-icon purple">⌘</span></div>
+            <div class="stat-value" id="uniqueIps">38</div>
+            <div class="stat-foot"><span class="trend neutral">●</span> Observed in current dataset</div>
+            <div class="mini-bars bars-purple"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Critical findings</span><span class="stat-icon amber">⚑</span></div>
+            <div class="stat-value" id="criticalCount">02</div>
+            <div class="stat-foot"><span class="trend warning">Needs review</span> Validate before action</div>
+            <div class="mini-bars bars-amber"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+        </div>
+
+        <div class="panel source-panel" style="margin-bottom:16px"><div class="panel-heading" style="margin-bottom:8px"><div><h2>Analysis source</h2><p id="modeLabel">Connecting to Python analyzer…</p></div></div><div id="sourceSummary" style="color:#91a3be;font:10px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap">Loading sources…</div><p id="eventNote" style="margin:9px 0 0;color:#7084a2;font-size:10px"></p></div>
+        <div class="content-grid">
+          <section class="panel activity-panel">
+            <div class="panel-heading">
+              <div><h2>Event types</h2><p>Most common event types in the analyzed logs</p></div>
+              <select id="chartRange" class="select-control" aria-label="Chart range"><option value="24">Last 24 hours</option><option value="7">Last 7 days</option></select>
+            </div>
+            <div class="chart-legend"><span><i class="legend-dot dot-blue"></i> Normal events</span><span><i class="legend-dot dot-red"></i> Suspicious events</span></div>
+            <div class="chart-wrap">
+              <div class="y-labels"><span>400</span><span>300</span><span>200</span><span>100</span><span>0</span></div>
+              <div class="chart" id="activityChart" role="img" aria-label="Event activity chart"></div>
+            </div>
+            <div class="chart-xlabels" id="chartLabels"><span>00:00</span><span>04:00</span><span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span><span>Now</span></div>
+          </section>
+
+          <section class="panel severity-panel">
+            <div class="panel-heading"><div><h2>Alert severity</h2><p>Breakdown of detected findings</p></div><button class="text-btn" id="viewAlertsBtn">View alerts →</button></div>
+            <div class="severity-content">
+              <div class="donut" id="severityDonut"><div class="donut-center"><strong id="donutTotal">06</strong><span>Alerts</span></div></div>
+              <div class="severity-legend">
+                <div><span class="sev-dot critical"></span><span>Critical</span><strong id="legendCritical">2</strong></div>
+                <div><span class="sev-dot high"></span><span>High</span><strong id="legendHigh">2</strong></div>
+                <div><span class="sev-dot medium"></span><span>Medium</span><strong id="legendMedium">1</strong></div>
+                <div><span class="sev-dot low"></span><span>Low</span><strong id="legendLow">1</strong></div>
+              </div>
+            </div>
+            <div class="severity-foot"><span class="pulse"></span> Findings require analyst validation</div>
+          </section>
+        </div>
+
+        <section class="panel alerts-panel" id="alerts">
+          <div class="panel-heading alerts-heading">
+            <div><h2>Detected security alerts <span class="heading-count" id="alertsHeadingCount">00</span></h2><p>Findings generated by the Python detection rules</p></div>
+            <div class="table-actions">
+              <div class="search-box"><span>⌕</span><input id="alertSearch" type="search" placeholder="Search alerts..." aria-label="Search alerts"></div>
+              <select id="severityFilter" class="select-control" aria-label="Filter by severity"><option value="all">All severities</option><option>Critical</option><option>High</option><option>Medium</option><option>Low</option></select>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>ALERT / DETECTION</th><th>SOURCE IP</th><th>SEVERITY</th><th>TIME</th><th>STATUS</th><th></th></tr></thead>
+              <tbody id="alertsTable"></tbody>
+            </table>
+          </div>
+          <div class="table-footer"><span id="alertShowing">Showing 6 alerts</span><button class="text-btn" id="exportAlertsBtn">Export CSV ↓</button></div>
+        </section>
+
+        <section class="panel logs-panel" id="logs">
+          <div class="panel-heading">
+            <div><h2>Log explorer</h2><p>Parsed events from the selected log source</p></div>
+            <div class="table-actions"><div class="search-box"><span>⌕</span><input id="logSearch" type="search" placeholder="Search logs..." aria-label="Search logs"></div><button class="btn btn-secondary btn-small" id="exportLogsBtn">Export events</button></div>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>TIMESTAMP</th><th>EVENT TYPE</th><th>MESSAGE</th><th>SOURCE</th><th>RESULT</th></tr></thead>
+              <tbody id="logsTable"></tbody>
+            </table>
+          </div>
+          <div class="table-footer"><span id="logsShowing">Showing recent events</span><span class="table-note">Browser-side demo parser</span></div>
+        </section>
+
+        <section class="panel reports-panel" id="reports">
+          <div class="panel-heading"><div><h2>Reports & exports</h2><p>Download a snapshot of the current Python analysis</p></div></div>
+          <div class="report-cards">
+            <div class="report-card"><div class="report-file-icon json">{} </div><div class="report-copy"><strong>JSON findings</strong><small>Structured alert data</small></div><button class="round-download" data-export="json" aria-label="Download JSON">↓</button></div>
+            <div class="report-card"><div class="report-file-icon csv">▦</div><div class="report-copy"><strong>CSV alerts</strong><small>Spreadsheet-friendly</small></div><button class="round-download" data-export="csv" aria-label="Download CSV">↓</button></div>
+            <div class="report-card"><div class="report-file-icon txt">≡</div><div class="report-copy"><strong>Text summary</strong><small>Quick investigation notes</small></div><button class="round-download" data-export="txt" aria-label="Download text report">↓</button></div>
+          </div>
+        </section>
+        <footer class="footer"><span>Security Log Analyzer <b>·</b> Python engine dashboard</span><span><i class="footer-dot"></i> Local-only session <b>·</b> No automatic blocking</span></footer>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="alertModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-kicker">ALERT DETAILS</div><h2 id="modalTitle">Alert details</h2>
+      <div id="modalBody"></div>
+      <div class="modal-actions"><button class="btn btn-secondary" id="copyAlertBtn">Copy details</button><button class="btn btn-primary" id="markReviewedBtn">Close details</button></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
